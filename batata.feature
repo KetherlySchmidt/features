@@ -1,8 +1,8 @@
 #language: pt
 
-Funcionalidade: Pesquisar no Google
+Funcionalidade: Pesquisar
     Cenário: Pesquisar batata
-        Dado que esteja na pagina do google
+        Dado que esteja na home
         Quando digitar batata na barra de Pesquisar
         E abrir barra imagens
         E abrir a primeira imagem
