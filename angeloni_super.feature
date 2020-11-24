@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Produto
-    Cenario: abri página do produto
+    Cenario: abrir página do produto
         Dado que esteja na home
         Quando abrir departamento de produtos
         E acessar produto
