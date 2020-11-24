@@ -1,10 +1,9 @@
 #language: pt
 
 Funcionalidade: Sacola
-    Cenário: Adicionar produto à sacola
+    Cenário: Adicionar produto à sacola pela pesquisa
         Dado que esteja na home
-        Quando pesquisar computador
-        E clicar no computador
+        Quando pesquisar por computador
         E abrir pagina do computador
-        E clicar em adicionar à sacola
+        E adicionar à sacola
         Então deverá ser exibido a sacola

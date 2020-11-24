@@ -3,8 +3,7 @@
 Funcionalidade: Autenticação
     Contexto: Abrir Cadastro
         Dado que esteja na home
-        Quando clicar em entrar
-        E clicar em cadastrar
+        Quando abrir o cadastro
  
         Esquema do Cenário: Realizar Cadastro
             Quando realizar cadastro com "<email>" e "<senha>" e "<CPF>"
