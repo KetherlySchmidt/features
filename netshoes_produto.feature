@@ -2,8 +2,8 @@
 
 Funcionalidade: Produto
 
- Contexto: Home
-    Dado que esteja na home
+    Contexto: Home
+        Dado que esteja na home
 
         Cenário: Seleção de produto pela home
             Quando abrir pagina do produto 'camiseta adidas'
