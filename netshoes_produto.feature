@@ -2,46 +2,45 @@
 
 Funcionalidade: Produto
 
-    Cenário: Seleção de produto pela home
-        Dado que esteja na home
-        Quando selecionar o produto
-        Então deverá ser exibido a pagina do produto
+ Contexto: Home
+    Dado que esteja na home
 
-    Cenário: Seleção de produto por categoria
-        Dado que esteja na home
-        Quando abrir categoria do produto
-        E selecionar o produto
-        Então deverá ser exibido a pagina do produto
+        Cenário: Seleção de produto pela home
+            Quando abrir pagina do produto 'camiseta adidas'
+            E adicionar ao carrinho
+            Então deverá ser exibido o produto no carrinho
 
-    Cenário: Seleção de produto pela busca
-        Dado que esteja na home
-        Quando pesquisar o produto na barra de busca
-        E selecionar o produto
-        Então deverá ser exibido a pagina do produto
+        Esquema do Cenário: Seleção de produto por categoria
+            Quando selecionar a "<categoria>"
+            E abrir pagina do "<produto>"
+            E adicionar ao carrinho
+            Então deverá ser exibido o produto no carrinho
 
-    Cenário: Seleção de produto pela busca Exception
-        Dado que esteja na home
-        Quando pesquisar o produto na barra de busca
-        Então deverá ser exibida a mensagem de erro "<mensagem>"
+            Exemplos:
+               | Categoria     | Produto      | 
+               | Casual        | camiseta     | 
+               | Corrida       | tenis        | 
+               | Futebol       | chuteira     | 
+               | Suplementos   | coqueteleira | 
+           
+        Cenário: Seleção de produto pela busca
+            Quando pesquisar na barra de busca o produto 'tenis de basquete'
+            E abrir a pagina do produto
+            E adicionar ao carrinho
+            Então deverá ser exibido o produto no carrinho
 
-    Cenário: Seleção de produto pela página do produto
-        Dado que esteja na home
-        Quando abrir a página do produto
-        Então deverá ser exibido a pagina do produto
+        Cenário: Seleção de produto pela sugestão
+            Quando pesquisar na barra de busca o produto 'bicicleta'
+            E acessar a pagina do produto sugerido
+            E adicionar ao carrinho
+            Então deverá ser exibido o produto no carrinho
+       
+        Cenário: Seleção de produto pela lista de desejos
+            Quando abrir a lista de desejos
+            E adicionar ao carrinho
+            Então deverá ser exibido o produto no carrinho
 
-    Cenário: Seleção de produto pela sugestão
-        Dado que esteja na home
-        Quando pesquisar o produto na barra de busca
-        E selecionar o produto sugerido na barra
-        Então deverá ser exibido a pagina do produto
-
-    Contexto: Abrir lista de desejos
-        Dado que esteja na home
-        Quando abrir a lista de desejos
-    
-        Esquema do Cenário: Seleção de produto pela lista de desejos           
-            Quando selecionar o produto
-            Então deverá ser exibido a pagina do produto
-
-        Esquema do Cenário: Seleção de produto pela lista de desejos Exception
-            Então deverá ser exibida a mensagem de lista vazia "<mensagem>"
+        Cenário: Seleção de produto pela lista de desejos Exception
+            Quando abrir a lista de desejos           
+            Mas não houver nenhum produto adicionado a lista de desejo
+            Então deverá ser exibido a mensagem 'Você ainda não possui itens salvos na sua lista de desejo'

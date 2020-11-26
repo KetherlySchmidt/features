@@ -20,12 +20,8 @@ Funcionalidade: Autenticação
  
             Exemplos:
                | email              | senha     | mensagem      |
-               | teste@testando     | 123456    | senha errada! | 
+               | teste@testando     | 123456    | login ou senha invalidos | 
 
-
-    Contexto: Abrir Cadastro
-        Dado que esteja na home
-        Quando abrir o cadastro
  
         Esquema do Cenário: Realizar Cadastro
             Quando realizar cadastro com "<email>" e "<senha>"

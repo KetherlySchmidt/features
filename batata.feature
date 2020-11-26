@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Pesquisar
+Funcionalidade: Produto
     Cenário: Pesquisar batata
         Dado que esteja na home
         Quando digitar batata na barra de Pesquisar
