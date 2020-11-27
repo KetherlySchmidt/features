@@ -11,33 +11,33 @@ Funcionalidade: Produto
             Então deverá ser exibido o produto no carrinho
 
         Esquema do Cenário: Seleção de produto por categoria
-            Quando selecionar a "<categoria>"
-            E abrir pagina do "<produto>"
-            E adicionar ao carrinho
+            Quando selecionar a categoria "<categoria>"
+            E selecionar o primeiro produto
+            E adicionar o produto ao carrinho
             Então deverá ser exibido o produto no carrinho
 
             Exemplos:
-               | Categoria     | Produto      | 
-               | Casual        | camiseta     | 
-               | Corrida       | tenis        | 
-               | Futebol       | chuteira     | 
-               | Suplementos   | coqueteleira | 
+               | Categoria     | 
+               | Casual        | 
+               | Corrida       | 
+               | Futebol       |  
+               | Suplementos   | 
            
         Cenário: Seleção de produto pela busca
-            Quando pesquisar na barra de busca o produto 'tenis de basquete'
-            E abrir a pagina do produto
-            E adicionar ao carrinho
+            Quando pesquisar por "<busca>"
+            E selecionar o primeiro produto
+            E adicionar o produto ao carrinho
             Então deverá ser exibido o produto no carrinho
 
         Cenário: Seleção de produto pela sugestão
-            Quando pesquisar na barra de busca o produto 'bicicleta'
-            E acessar a pagina do produto sugerido
-            E adicionar ao carrinho
+            Quando pesquisar por "<busca>"
+            E selecionar o primeiro produto sugerido
+            E adicionar o produto ao carrinho
             Então deverá ser exibido o produto no carrinho
        
         Cenário: Seleção de produto pela lista de desejos
             Quando abrir a lista de desejos
-            E adicionar ao carrinho
+            E adicionar o primeiro produto ao carrinho
             Então deverá ser exibido o produto no carrinho
 
         Cenário: Seleção de produto pela lista de desejos Exception
