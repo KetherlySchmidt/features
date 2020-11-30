@@ -19,23 +19,19 @@ Funcionalidade: Autenticação
             Então deverá ser exibida a mensagem de erro "<mensagem>"
  
             Exemplos:
-               | email              | senha     | mensagem      |
-               | teste@testando     | 123456    | login ou senha invalidos | 
+               | email              | erro                        | mensagem                 |
+               | teste@testando     | login ou senha invalidos    | login ou senha invalidos | 
 
  
-        Esquema do Cenário: Realizar Cadastro
-            Quando realizar cadastro com "<email>" e "<senha>"
-            Então deverá ser exibido "<mensagem>"
- 
-            Exemplos:
-                | email             | senha    | mensagem               |
-                | test@teste        | 12345    | cadastrado com sucesso |
+        Cenário: Realizar Cadastro
+            Quando realizar cadastro
+            Então deverá ser exibido mensagem "Cadastro realizado com sucesso"
  
         Esquema do Cenário: Realizar Cadastro Exception
             Quando realizar cadastro com "<email>" e "<senha>"
             Então deverá ser exibida a mensagem de erro "<mensagem>"
  
             Exemplos:
-                | email              | senha     | mensagem                                                     |
-                | test@teste         | 12345     | Email ja cadastrado, verifique seus dados e tente novamente  |
-                | teste@testando     | 123456    | Cadastro não pode ser realizado, verifique seus dados        |
+                | Erro                   | mensagem                                                     |
+                | Usuario já cadastrado  | Email ja cadastrado, verifique seus dados e tente novamente  |
+                | Informações invalidas  | Cadastro não pode ser realizado, verifique seus dados        |

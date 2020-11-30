@@ -23,17 +23,28 @@ Funcionalidade: Produto
                | Futebol       |  
                | Suplementos   | 
            
-        Cenário: Seleção de produto pela busca
+        Esquema do Cenário: Seleção de produto pela busca
             Quando pesquisar por "<busca>"
             E selecionar o primeiro produto
             E adicionar o produto ao carrinho
             Então deverá ser exibido o produto no carrinho
 
-        Cenário: Seleção de produto pela sugestão
+            Exemplos:
+               | Bicicleta             | 
+               | Tênis                 | 
+               | Bola de basquete      | 
+ 
+
+        Esquema do Cenário: Seleção de produto pela sugestão
             Quando pesquisar por "<busca>"
             E selecionar o primeiro produto sugerido
             E adicionar o produto ao carrinho
             Então deverá ser exibido o produto no carrinho
+
+            Exemplos:
+               | Bicicleta             | 
+               | Tênis                 | 
+               | Bola de basquete      | 
        
         Cenário: Seleção de produto pela lista de desejos
             Quando abrir a lista de desejos
